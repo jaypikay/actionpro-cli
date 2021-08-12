@@ -8,7 +8,9 @@ configure their action camera, or reset the credetials, if the credentials were 
 This project uses parts of the [xusb.c](https://github.com/libusb/libusb/blob/master/examples/xusb.c)
 example program provided by the libusb project.
 
-This program is a result of my work on reverse engineering the _Action Manager_
+This program is a result of my work on reverse engineering the _Action Manager_, the write up
+of this project can be found on
+[goatpr0n.farm](https://goatpr0n.farm/2021/08/reversing-an-eol-action-camera-usb-scsi-direct-access/).
 
 
 ## Requirements
