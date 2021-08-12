@@ -1,0 +1,10 @@
+attic/
+.ccls-cache/
+.cache/
+
+compile_commands.json
+
+*.o
+
+actionpro
+config.h
