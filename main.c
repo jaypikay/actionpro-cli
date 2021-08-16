@@ -10,7 +10,7 @@
 
 #include "config.h"
 
-#define VERSION "0.5"
+#define VERSION "1.0"
 
 static int setpassword(const char *password)
 {
