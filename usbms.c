@@ -34,7 +34,7 @@
 
 static struct libusb_device_handle *handle = NULL;
 
-int send_command(const uint8_t opcode, const char *buf, const uint8_t buflen)
+int send_command(const uint8_t opcode, const uint8_t *buf, const uint8_t buflen)
 {
     int rc;
     uint32_t expected_tag = 0;

@@ -27,6 +27,6 @@
 /* exported functions */
 extern int open_device();
 extern int close_device();
-extern int send_command(const uint8_t opcode, const char *buf, const uint8_t buflen);
+extern int send_command(const uint8_t opcode, const uint8_t *buf, const uint8_t buflen);
 
 #endif /* usbms_h */
