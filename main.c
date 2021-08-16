@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <string.h>
+#include <time.h>
 #include <getopt.h>
 
 #include "usbms.h"
@@ -73,9 +74,36 @@ static int setssid(const char *ssid)
 static int settime()
 {
     printf("Setting device time... ");
-    printf("NOT YET implemented\n");
 
-    return 0;
+    time_t curtime;
+    struct tm *timeinfo;
+
+
+    if (time(&curtime)) {
+        timeinfo = localtime(&curtime);
+        if (timeinfo) {
+            uint8_t newtime[8] = {0};
+
+            const uint16_t year = (timeinfo->tm_year + 1900) >> 8 | (timeinfo->tm_year + 1900) << 8;
+            const uint8_t month = timeinfo->tm_mon + 1;
+
+            memcpy(newtime+0, &year, 2);
+            memcpy(newtime+2, &month, 1);
+            memcpy(newtime+3, &timeinfo->tm_mday,  1);
+            memcpy(newtime+4, &timeinfo->tm_hour,  1);
+            memcpy(newtime+5, &timeinfo->tm_min,  1);
+            memcpy(newtime+6, &timeinfo->tm_sec,  1);
+
+            if (send_command(ACTIONPRO_OPCODE_SETTIME, newtime, 8) == ACTIONPRO_CMD_OK)
+                printf("OK\n");
+            else
+                printf("ERROR\n");
+
+            return 0;
+        }
+    }
+
+    return 1;
 }
 
 int main(int argc, char *argv[])
