@@ -160,8 +160,6 @@ int main(int argc, char *argv[])
         if (new_ssid)
             setssid(new_ssid);
 
-        open_device();
-
         if (sync_time)
             settime();
     }
