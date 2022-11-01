@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build gcc12
+    image: gcc:12
+    commands:
+      - make config.h
+      - make
+  - name: build gcc11
+    image: gcc:11
+    commands:
+      - make config.h
+      - make
