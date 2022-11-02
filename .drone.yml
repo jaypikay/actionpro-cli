@@ -6,7 +6,7 @@ steps:
     image: gcc:12
     commands:
       - apt-get update -qq
-      - apt-get search libusb
+      - apt-cache search libusb
       - apt-get install -y libusb-1
       - make config.h
       - make
