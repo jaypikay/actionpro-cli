@@ -5,10 +5,12 @@ steps:
   - name: build gcc12
     image: gcc:12
     commands:
+      - apt install libusb-1
       - make config.h
       - make
   - name: build gcc11
     image: gcc:11
     commands:
+      - apt install libusb-1
       - make config.h
       - make
