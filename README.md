@@ -12,6 +12,10 @@ This program is a result of my work on reverse engineering the _Action Manager_,
 of this project can be found on
 [goatpr0n.farm](https://goatpr0n.farm/2021/08/reversing-an-eol-action-camera-usb-scsi-direct-access/).
 
+## Build Status
+
+[![Build Status](https://drone.goatpr0n.farm/api/badges/blog/actionpro-cli/status.svg)](https://drone.goatpr0n.farm/blog/actionpro-cli)
+
 
 ## Requirements
 
