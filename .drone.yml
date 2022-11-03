@@ -2,6 +2,23 @@ kind: pipeline
 name: default
 
 steps:
+  - name: build gcc [latest]
+    image: gcc:latest
+    commands:
+      - apt-get update -qq
+      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev
+      - make config.h
+      - make
+  - name: gitea_release
+    image: plugins/gitea-release
+    settings:
+      api_key: 666d6a9c0d97530b7ba8a052ab948def6a2046d6
+      base_url: https://git.goatpr0n.de
+      files: actionpro
+      title: Release ${DRONE_SEMVER}
+    when:
+      event:
+        - tag
   - name: build gcc12
     image: gcc:12
     commands:
