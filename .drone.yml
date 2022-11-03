@@ -6,7 +6,8 @@ steps:
     image: gcc:latest
     commands:
       - apt-get update -qq
-      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev
+      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev cowsay
+      - gcc --version | head -n1 | cowsay
       - make config.h
       - make
   - name: gitea_release
@@ -23,13 +24,15 @@ steps:
     image: gcc:12
     commands:
       - apt-get update -qq
-      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev
+      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev cowsay
+      - gcc --version | head -n1 | cowsay
       - make config.h
       - make
   - name: build gcc11
     image: gcc:11
     commands:
       - apt-get update -qq
-      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev
+      - apt-get install -y libusb-1.0-0 libusb-1.0-0-dev cowsay
+      - gcc --version | head -n1 | cowsay
       - make config.h
       - make
