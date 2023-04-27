@@ -14,7 +14,7 @@ of this project can be found on
 
 ## Build Status
 
-[![Build Status](https://drone.goatpr0n.farm/api/badges/blog/actionpro-cli/status.svg)](https://drone.goatpr0n.farm/blog/actionpro-cli)
+[![Build Status](https://pipe.goatpr0n.de/api/badges/blog/actionpro-cli/status.svg)](https://drone.goatpr0n.farm/blog/actionpro-cli)
 
 
 ## Requirements
