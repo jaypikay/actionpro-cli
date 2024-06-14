@@ -2,6 +2,6 @@
 #define config_h
 
 /* defaults */
-#define RETRY_MAX   5
+#define RETRY_MAX 5
 
 #endif /* config_h */
