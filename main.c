@@ -10,7 +10,7 @@
 
 #include "config.h"
 
-#define VERSION "1.0"
+#define VERSION "1.0.0"
 
 static int setpassword(const char *password) {
   unsigned long slen = strlen(password);
@@ -168,7 +168,6 @@ int main(int argc, char *argv[]) {
 
   if (show_help) {
     printf("Usage: %s [OPTION]\n", argv[0]);
-    printf("  -C, --config-file=FILE     use this user configuration file\n");
     printf("  -h, --help                 give this help list\n");
     printf("  -p, --password=PASSWORD    sets the access point authentication "
            "PASSWORD\n");
