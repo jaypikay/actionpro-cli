@@ -157,6 +157,7 @@ int main(int argc, char *argv[]) {
       break;
     case 'v':
       show_version = true;
+      break;
     case '?':
       fprintf(stderr, "Use option -h, --help for instructions.\n");
       exit(EXIT_FAILURE);
