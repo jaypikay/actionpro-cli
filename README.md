@@ -13,10 +13,6 @@ This program is a result of my work on reverse engineering the _Action Manager_,
 of this project can be found on
 [goatpr0n.farm](https://goatpr0n.farm/2021/08/reversing-an-eol-action-camera-usb-scsi-direct-access/).
 
-## Build Status
-
-[![Build Status](https://pipe.goatpr0n.de/api/badges/blog/actionpro-cli/status.svg)](https://pipe.goatpr0n.de/blog/actionpro-cli)
-
 ## Requirements
 
 **Libraries**:
@@ -48,7 +44,6 @@ If the file `config.h` does not exist while running make, the defaults are copie
 
 ```
 Usage: ./actionpro [OPTION]
-  -C, --config-file=FILE     use this user configuration file
   -h, --help                 give this help list
   -p, --password=PASSWORD    sets the access point authentication PASSWORD
   -s, --ssid=SSID            sets the access point SSID
