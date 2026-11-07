@@ -38,12 +38,15 @@ static int setpassword(const char *password) {
   }
   printf("Updating password to `%s'... ", password);
   if (send_command(ACTIONPRO_OPCODE_SETPASSWORD, (const uint8_t *)password,
-                   slen) == ACTIONPRO_CMD_OK)
-    printf("OK\n");
-  else
-    printf("ERROR\n");
+                   slen) == ACTIONPRO_CMD_OK) {
 
-  return 0;
+    printf("OK\n");
+    return 0;
+  } else {
+
+    printf("ERROR\n");
+    return 1;
+  }
 }
 
 static int setssid(const char *ssid) {
@@ -66,12 +69,14 @@ static int setssid(const char *ssid) {
   }
   printf("Updating SSID to `%s'... ", ssid);
   if (send_command(ACTIONPRO_OPCODE_SETSSID, (const uint8_t *)ssid, slen) ==
-      ACTIONPRO_CMD_OK)
-    printf("OK\n");
-  else
-    printf("ERROR\n");
+      ACTIONPRO_CMD_OK) {
 
-  return 0;
+    printf("OK\n");
+    return 0;
+  } else {
+    printf("ERROR\n");
+    return 1;
+  }
 }
 
 static int settime() {
@@ -97,12 +102,14 @@ static int settime() {
       memcpy(newtime + 6, &timeinfo->tm_sec, 1);
 
       if (send_command(ACTIONPRO_OPCODE_SETTIME, newtime, 8) ==
-          ACTIONPRO_CMD_OK)
-        printf("OK\n");
-      else
-        printf("ERROR\n");
+          ACTIONPRO_CMD_OK) {
 
-      return 0;
+        printf("OK\n");
+        return 0;
+      } else {
+        printf("ERROR\n");
+        return 1;
+      }
     }
   }
 
