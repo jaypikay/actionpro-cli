@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
 
   while (1) {
     static struct option long_options[] = {
-        {"help", no_argument, 0, 'p'},
+        {"help", no_argument, 0, 'h'},
         {"password", required_argument, 0, 'p'},
         {"ssid", required_argument, 0, 's'},
         {"time", no_argument, 0, 't'},
