@@ -10,7 +10,7 @@
 
 #include "config.h"
 
-#define VERSION "1.0.0"
+#define VERSION "1.0.1"
 
 static int setpassword(const char *password) {
   unsigned long slen = strlen(password);
